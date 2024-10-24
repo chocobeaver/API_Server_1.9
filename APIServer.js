@@ -29,8 +29,9 @@ export default class APIServer {
 
 
         // API middlewares
-        this.middlewaresPipeline.add(router.API_EndPoint);
         this.middlewaresPipeline.add(CachedRequestsManager.get);
+        this.middlewaresPipeline.add(router.API_EndPoint);
+        
 
 
     }
